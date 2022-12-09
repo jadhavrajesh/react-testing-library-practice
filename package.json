@@ -5,7 +5,7 @@
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
-    "@testing-library/user-event": "^13.2.1",
+    "@testing-library/user-event": "^14.4.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
@@ -15,7 +15,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "coverage": "yarn test --coverage --watchAll"
   },
   "eslintConfig": {
     "extends": [
@@ -34,5 +35,21 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/components/*.js",
+      "src/components/**/*.js",
+      "!src/components/*.{test}.js",
+      "!src/components/**/*.{test}.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "statements": 80,
+        "branches": 80,
+        "functions": 80,
+        "lines": -10
+      }
+    }
   }
 }
