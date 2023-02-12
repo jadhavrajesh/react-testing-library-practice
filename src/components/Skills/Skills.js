@@ -3,11 +3,11 @@ import React, { useState, useEffect } from "react";
 export const Skills = ({ skills }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  useEffect(()=>{
-    setTimeout(()=>{
+  useEffect(() => {
+    setTimeout(() => {
       setIsLoggedIn(true);
     }, 500);
-  },[]);
+  }, []);
 
   return (
     <>

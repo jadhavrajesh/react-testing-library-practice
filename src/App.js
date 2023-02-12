@@ -6,8 +6,8 @@ import { Application } from "./components/Application/Application";
 function App() {
   return (
     <>
-      {/* <Skills skills={SkillsData} />; */}
-      <Application />
+      <Skills skills={SkillsData} />;
+      {/* <Application /> */}
     </>
   );
 }

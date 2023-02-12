@@ -51,22 +51,23 @@ describe("Counter", () => {
     expect(headingElem).toHaveTextContent(2);
   });
 
-  test.only("renders a count of 10 after clicking the set button", () => {
-    // const view = 
+  test("renders a count of 10 after clicking the set button", async () => {
     user.setup();
     render(<Counter />);
-    // logRoles(view);
 
     // input of type number, the role is spinbutton
-    const amountInputElem = screen.getByRole("spinbutton", {
-      name: "amount",
-    });
+    const amountInputElem = screen.getByRole("spinbutton");
     expect(amountInputElem).toBeInTheDocument();
     
     // set value as 10 in amount input
-    // user.type(amountInputElem, "10");
-    // expect(amountInputElem).toHaveValue(10);
-    // const setButton = screen.getByRole("button", { name: "Set" });
-    // expect(setButton).toBeIntheDocument();
+    await user.type(amountInputElem, "10");    
+    expect(amountInputElem).toHaveValue(10);
+
+    const setButton = screen.getByRole("button", { name: "Set" });
+    // simulate the button interaction
+    await user.click(setButton);    
+    
+    const headingElem = screen.getByRole("heading");
+    expect(headingElem).toHaveTextContent(10);
   });
 });
