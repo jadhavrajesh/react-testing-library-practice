@@ -53,11 +53,13 @@ describe("Application", () => {
     expect(paragraphElem).toBeInTheDocument();
 
     // substring match
-    const paragraphElem2 = screen.getByText("are mandatory", {exact:false});
+    const paragraphElem2 = screen.getByText("are mandatory", { exact: false });
     expect(paragraphElem2).toBeInTheDocument();
 
     // ignore case
-    const paragraphElem3 = screen.getByText("all fields are mandatory", {exact: false});
+    const paragraphElem3 = screen.getByText("all fields are mandatory", {
+      exact: false,
+    });
     expect(paragraphElem3).toBeInTheDocument();
 
     /** getByDisplayValue */

@@ -37,9 +37,9 @@ describe("Skills", () => {
     const view = render(<Skills skills={skills} />);
     // to print all the aria roles from the dom tree
     logRoles(view.container);
-    
+
     // to visualize the formatted state of the dom tree
-    // screen.debug(); 
+    // screen.debug();
     // findBy.. has default timeout of 1000ms
     const startLearningButton = await screen.findByRole(
       "button",

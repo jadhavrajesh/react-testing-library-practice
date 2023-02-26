@@ -7,8 +7,8 @@ const Users = () => {
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/users")
       .then((response) => response.json())
-      .then((data) => {      
-        const users = data.map(user=>({ name: user.name}));
+      .then((data) => {
+        const users = data.map((user) => ({ name: user.name }));
         setUsers(users);
       })
       .catch(() => {

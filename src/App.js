@@ -9,7 +9,7 @@ function App() {
     <>
       {/* <Skills skills={SkillsData} />; */}
       {/* <Application /> */}
-      <Users/>
+      <Users />
     </>
   );
 }

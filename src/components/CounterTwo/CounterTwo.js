@@ -5,10 +5,12 @@ const CounterTwo = ({ count, incrementHandler, decrementHandler }) => {
     <>
       <h1>Counter Two</h1>
       <p>{count}</p>
-      {incrementHandler &&
-      <button onClick={incrementHandler}>Increment Count</button>}
-      {decrementHandler &&
-      <button onClick={decrementHandler}>Decrement Count</button>}
+      {incrementHandler && (
+        <button onClick={incrementHandler}>Increment Count</button>
+      )}
+      {decrementHandler && (
+        <button onClick={decrementHandler}>Decrement Count</button>
+      )}
     </>
   );
 };

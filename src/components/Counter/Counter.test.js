@@ -58,15 +58,15 @@ describe("Counter", () => {
     // input of type number, the role is spinbutton
     const amountInputElem = screen.getByRole("spinbutton");
     expect(amountInputElem).toBeInTheDocument();
-    
+
     // set value as 10 in amount input
-    await user.type(amountInputElem, "10");    
+    await user.type(amountInputElem, "10");
     expect(amountInputElem).toHaveValue(10);
 
     const setButton = screen.getByRole("button", { name: "Set" });
     // simulate the button interaction
-    await user.click(setButton);    
-    
+    await user.click(setButton);
+
     const headingElem = screen.getByRole("heading");
     expect(headingElem).toHaveTextContent(10);
   });
