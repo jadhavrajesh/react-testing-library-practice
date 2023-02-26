@@ -18,7 +18,8 @@
     "eject": "react-scripts eject",
     "coverage": "yarn test --coverage --watchAll",
     "lint": "eslint --ignore-path .gitignore .",
-    "format": "prettier --ignore-path .gitignore --write \"**/*.{js,css}\""
+    "format": "prettier --ignore-path .gitignore --write \"**/*.{js,css}\"",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -60,6 +61,7 @@
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-jest-dom": "^4.0.3",
     "msw": "^1.1.0",
-    "prettier": "^2.8.4"
+    "prettier": "^2.8.4",
+    "husky": "^8.0.0"
   }
 }
